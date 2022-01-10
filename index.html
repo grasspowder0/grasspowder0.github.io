@@ -1,1 +1,124 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=100, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>甘肃陇上青源生物科技有限公司</title>
+  <style>
+    .container{
+      width: 100%;
+      margin: 0 auto;
+      border: 1px solid #f00;
+      text-align: center;
+    }
+    video,embed,iframe{
+      border: 1px solid #000;
+      width: 100%;
+    }
+    .header{
+      height: 200;
+      margin: 0 auto;
+      border: 1px solid #008000;
+      text-align: center;
+    }
+    /* 类选择器 */
+    .imgbox {
+        border-top: 5px solid cadetblue;
+        /* 避免因窗口变化影响图片效果 */
+        width: 80%;
+        height: 40%;
+        margin: 0 left;
+    }
+
+    .img {
+        width: 80%;
+        height: 40%;
+        margin: 0 auto;
+        display: none;
+    }
+
+    .detail{
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .detailimg {
+        width: 80%;
+        height: 40%;
+        margin: 0 auto;
+    }
+
+    .footer{
+      width: 500;
+      height: 200;
+      margin: 0 auto;
+      border: 1px solid #008000;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+	<div class="header">
+		<p style="font-family:arial;color:green;font-size:40px;">甘肃陇上青源生物科技有限公司</p>
+	</div>
+
+  <div class="imgBox">
+      <!-- alt：图片路径失败时替换显示内容 -->
+      <img class="img-slide img" src="img/item_0.JPG" alt="img1">
+      <img class="img-slide img" src="img/item_1.JPG" alt="img2">
+      <img class="img-slide img" src="img/item_2.JPG" alt="img3">
+  </div>
+
+  <div class="detail">
+    <img  class="detailimg" src="img/detail_0.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_1.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_2.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_3.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_4.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_5.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_6.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_7.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_8.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_9.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_10.JPG" alt="img3"><br/>
+    <img  class="detailimg" src="img/detail_11.JPG" alt="img3"><br/>
+  </div>
+
+  <div class="footer">
+    <p style="font-family:arial;color:green;font-size:20px;">总经理：苏福星</p>
+    <p style="font-family:arial;color:green;font-size:20px;">电话：13132426698</p>
+    <p style="font-family:arial;color:green;font-size:20px;">微信：13132426698</p>
+    <p style="font-family:arial;color:green;font-size:20px;">Skype：sfx6698</p>
+    <p style="font-family:arial;color:green;font-size:20px;">邮箱：422739398@qq.com</p>
+  </div>
+  
+</body>
+
+<script type="text/javascript">
+        // index：索引， len：长度
+        var index = 0, len;
+        // 类似获取一个元素数组
+        var imgBox = document.getElementsByClassName("img-slide");
+        len = imgBox.length;
+        imgBox[index].style.display = 'block';
+        // 逻辑控制函数
+        function slideShow() {
+            index ++;
+            // 防止数组溢出
+            if(index >= len) index = 0;
+            // 遍历每一个元素
+            for(var i=0; i<len; i++) {
+                imgBox[i].style.display = 'none';
+            }
+            // 每次只有一张图片显示
+            imgBox[index].style.display = 'block';
+        }
+        
+        // 定时器，间隔3s切换图片
+        setInterval(slideShow, 1000);
+        
+    </script>
+</html>
