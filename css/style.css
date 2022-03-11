@@ -76,6 +76,7 @@ body{
 .cssmenu{
 	text-align:center;
 	padding:0.1% 0 0.2%;
+	float:right;
 }
 .cssmenu > ul > li {
 	display: inline-block;
@@ -88,7 +89,7 @@ body{
 .cssmenu > ul > li > a {
 	text-transform: uppercase;
 	font: normal 15px/30px PT Sans, sans-serif;
-	color: #FFF;
+	color: #000000;
 	display: block;
 	line-height: 4.8em;
 	padding: 10px 32px;
@@ -110,7 +111,7 @@ body{
 	background: url(../images/phone.png) left 8px no-repeat;
 }
 .banner{
-	background:#2f292b;
+	background:#ffffff;
 	padding-bottom:2%;
 }
 .about-banner{
